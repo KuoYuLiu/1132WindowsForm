@@ -35,6 +35,8 @@
             computeBtn = new Button();
             clearBtn = new Button();
             bmiResult = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -84,6 +86,7 @@
             computeBtn.TabIndex = 4;
             computeBtn.Text = "計算";
             computeBtn.UseVisualStyleBackColor = true;
+            computeBtn.Click += computeBtn_Click;
             // 
             // clearBtn
             // 
@@ -94,22 +97,34 @@
             clearBtn.TabIndex = 5;
             clearBtn.Text = "清除";
             clearBtn.UseVisualStyleBackColor = true;
+            clearBtn.Click += clearBtn_Click;
             // 
             // bmiResult
             // 
             bmiResult.AutoSize = true;
             bmiResult.Font = new Font("Microsoft JhengHei UI", 16F, FontStyle.Bold);
-            bmiResult.Location = new Point(153, 140);
+            bmiResult.Location = new Point(94, 128);
             bmiResult.Name = "bmiResult";
             bmiResult.Size = new Size(0, 28);
             bmiResult.TabIndex = 6;
             bmiResult.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.bmi_bg;
+            pictureBox1.Location = new Point(6, 178);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(393, 173);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(405, 415);
+            Controls.Add(pictureBox1);
             Controls.Add(bmiResult);
             Controls.Add(clearBtn);
             Controls.Add(computeBtn);
@@ -119,6 +134,7 @@
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -132,5 +148,6 @@
         private Button computeBtn;
         private Button clearBtn;
         private Label bmiResult;
+        private PictureBox pictureBox1;
     }
 }
